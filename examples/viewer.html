@@ -56,7 +56,7 @@
 		});
 		
 		// Load and add point cloud to scene
-		Potree.loadPointCloud("../pointclouds/vol_total/cloud.js", "sigeom.sa", e => {
+		Potree.loadPointCloud("https://s3.amazonaws.com/cm-persistent/005f4058214ac90fd121963da5b6ab6689122af0/octrees/20180511.034342245/cloud.js", "sigeom.sa", e => {
 			let scene = viewer.scene;
 			let pointcloud = e.pointcloud;
 			
@@ -74,6 +74,9 @@
 		
 	</script>
 	
+	<script type="text/javascript">
+		javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})();
+	</script>
 	
   </body>
 </html>
